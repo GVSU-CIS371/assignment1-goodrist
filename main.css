@@ -1,7 +1,86 @@
+/* Reset from starter */
 body,
 html {
-  /* height:100%; */
-
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout: header, main, footer */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  overflow-x: hidden; /* no horizontal scroll */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f9c78d;
+  border-bottom: 10px solid #fff;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigation links */
+header nav ul {
+  display: flex;        /* make links inline */
+  list-style: none;
+  gap: 1rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #f9c78d;
+  border-top: 10px solid #fff;
+}
+
+/* Main grid (store items) */
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem 3rem;  /* adds space on left/right */
+  background-color: #f9c78d;
+}
+
+/* Store item cards */
+.store-item {
+  background-color: #cfe2f3;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Product images */
+.store-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Rating, Price, Stock inline */
+.store-item span {
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-size: 0.9rem;
 }
